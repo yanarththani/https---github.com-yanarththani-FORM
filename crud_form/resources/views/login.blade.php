@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    {{ print_r($request) }}
+
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
@@ -32,18 +32,18 @@
                             </div>
                         @endif
 
-                        <form method="POST">
+                        <form method="POST" action="{{ route('login') }}">
                             @csrf
                             
                             <div class="mb-3">
-                                <label for="username" class="form-label">Username</label>
+                                <label for="email" class="form-label">E-mail</label>
                                 <input type="text" 
-                                       class="form-control @error('username') is-invalid @enderror" 
-                                       id="username" 
-                                       name="username" 
-                                       value="{{ old('username') }}" 
+                                       class="form-control @error('email') is-invalid @enderror" 
+                                       id="email" 
+                                       name="email" 
+                                       value="{{ old('email') }}" 
                                        required>
-                                @error('username')
+                                @error('email')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>

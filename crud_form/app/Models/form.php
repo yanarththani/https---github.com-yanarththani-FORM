@@ -15,7 +15,7 @@ class form extends Model
         'form_description',
         'status',
         'form_fields',
-        // 'google_sheet_id',
+        'google_sheet_endpoint',
         // 'google_sheet_url',
         // 'created_by',
         // 'updated_by'

@@ -56,7 +56,7 @@ class FormController extends Controller
         //         'message' => 'Failed to load forms'
         //     ], 500);
         // }
-        return view('login');
+        return view('form');
         compact('request');
     }
 

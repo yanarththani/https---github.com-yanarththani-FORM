@@ -140,7 +140,7 @@ label { display: block; margin-bottom: 5px; font-weight: 500; }
             <div class="header-actions">
                 <button class="btn btn-primary" id="save-form">Save Form</button>
                 <button class="btn btn-secondary" id="preview-form">Preview Form</button>
-                <button class="btn btn-danger">Logout</button>
+                <a href="{{route('logout')}}" class="btn btn-danger">Logout</button>
             </div>
         </header>
 

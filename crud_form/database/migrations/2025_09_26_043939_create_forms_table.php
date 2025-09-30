@@ -16,8 +16,9 @@ return new class extends Migration
             $table->timestamps();
             $table->string('form_title');
             $table->string('form_description');
-            $table->string('status')->default('active');
+            $table->boolean('status')->default(true);
             $table->JSON('form_fields'); // JSON or serialized data
+            $table->string('google_sheet_endpoint'); // Google Sheet Endpoint
 
         });
     }
